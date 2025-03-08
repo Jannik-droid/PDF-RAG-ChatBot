@@ -1,5 +1,7 @@
 import hashlib
 from langchain_ollama import OllamaEmbeddings
+import shutil
+import os
 from langchain_chroma import Chroma  # Updated import
 
 # Function to create a hash of document content
@@ -32,3 +34,15 @@ def create_vector_store(documents, persist_directory="./chroma_db"):
         vector_store.add_documents(new_documents)
     
     return vector_store  # No need to call persist() anymore
+
+# Function to clear the vector storage
+def clear_vector_store(persist_directory="./chroma_db"):
+    for filename in os.listdir(persist_directory):
+        file_path = os.path.join(persist_directory, filename)
+        try:
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        except Exception as e:
+            print(f'Failed to delete {file_path}. Reason: {e}')
