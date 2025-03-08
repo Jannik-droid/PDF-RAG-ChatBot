@@ -11,3 +11,6 @@ A locally running **Retrieval-Augmented Generation (RAG)** system that processes
 
 ## 🦾 How to use
 Since this is a StreamLit App, just type: `stremalit run app.py` and follow the instructions in the app.
+
+## ⚙️ Requirements
+Make sure to have Ollama and the corresponding LLMs installed (e.g. `Mistral` and `nomic-embed-text`)
