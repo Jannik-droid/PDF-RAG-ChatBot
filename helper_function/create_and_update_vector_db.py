@@ -24,7 +24,7 @@ def create_vector_store(documents, persist_directory="./chroma_db"):
     for doc in documents:
         doc_hash = hash_document(doc.page_content)
         if doc_hash not in existing_hashes:
-            doc.metadata["hash"] = doc_hash  # Store hash in metadata
+            doc.metadata["hash"] = doc_hash
             new_documents.append(doc)
 
     # Add only new documents

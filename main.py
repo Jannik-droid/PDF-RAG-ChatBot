@@ -15,5 +15,3 @@ if __name__ == "__main__":
             print("Response:", response)
         except EOFError:
             break
-
-    
