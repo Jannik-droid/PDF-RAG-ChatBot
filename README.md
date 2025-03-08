@@ -6,5 +6,4 @@ A locally running **Retrieval-Augmented Generation (RAG)** system that processes
 - Extracts & cleans text from PDFs 📄  
 - Generates **embeddings** using `mxbai-embed-large`  
 - Stores & retrieves **vectors** with **ChromaDB**  
-- Queries an **Ollama LLM** (`mistral`, `gemma`, `llama3`)  
-
+- Queries an **Ollama LLM** (`mistral`)  
