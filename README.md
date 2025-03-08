@@ -4,7 +4,7 @@ A locally running **Retrieval-Augmented Generation (RAG)** system that processes
 
 ## 🚀 Features  
 - Extracts & cleans text from PDFs 📄  
-- Generates **embeddings** using `mxbai-embed-large`  
+- Generates **embeddings** using `nomic-embed-texte`  
 - Stores & retrieves **vectors** with **ChromaDB**  
 - Queries an **Ollama LLM** (`mistral`) 
 - Userfriendly **StreamLit UI**
